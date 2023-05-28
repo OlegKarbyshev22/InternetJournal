@@ -12,9 +12,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('', function () {
-    return view('layouts.main');
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
 Route::get('/login', [\App\Http\Controllers\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login_process', [\App\Http\Controllers\LoginController::class, 'authenticate'])->name('login_process');

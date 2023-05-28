@@ -46,92 +46,115 @@
     <h2 class="text-4xl mt-1 font-bold text-center dark:text-white">Свежие статьи</h2>
     <hr class="mt-2">
 
-    <div class="wrapper flex-wrap flex justify-between mt-2">
-
+    <div class="wrapper flex-wrap flex justify-around mt-2">
+        @foreach($allCategories as $allCategory)
         <div class="max-w-sm bg-white mb-3 border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
+            <a href="{{$allCategory->slug}}">
                 <img class="" src="{{asset('images/46.jpg')}}" alt="" />
             </a>
             <div class="p-5">
                 <a href="#">
-                    <h5 class="mb-2 text-2xl  font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                    <h5 class="mb-2 text-2xl  font-bold tracking-tight text-gray-900 dark:text-white">{{$allCategory->title}}</h5>
                 </a>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Читать
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
+                <span class="bg-indigo-100  text-indigo-800 text-base p-1 font-medium mt-2 mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{$allCategory->category->category_name}}</span>
             </div>
         </div>
-        <div class="max-w-sm bg-white mb-3 border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="" src="{{asset('images/555.jpg')}}" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight overflow-hidden text-gray-900 dark:text-white"> ых странных слов в Lorem Ipsum, "consectetur", и занялся его по</h5>
-                </a>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Читать
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-        </div>
-        <div class="max-w-sm bg-white mb-3 border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="" src="{{asset('images/46.jpg')}}" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                </a>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Читать
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-        </div>
-        <div class="max-w-sm bg-white border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="" src="{{asset('images/46.jpg')}}" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                </a>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Читать
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-        </div>
-        <div class="max-w-sm bg-white border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="" src="{{asset('images/46.jpg')}}" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                </a>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Читать
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-        </div>
-        <div class="max-w-sm bg-white border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="" src="{{asset('images/46.jpg')}}" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                </a>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Читать
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-        </div>
+        @endforeach
     </div>
-    <button type="button" class="text-white mt-2 w-full bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2">Все статьи</button>
+    <button type="button" class="text-white text-base mt-2 w-full bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-5 py-2.5 text-center mr-2 mb-2">Все статьи</button>
+
+    <h4 class="mb-4 text-center font-extrabold text-gray-900 dark:text-white text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">#Техника</span></h4>
+    <hr class="mt-2">
+    <div class="wrapper flex-wrap flex justify-around  mt-2">
+        @foreach($technologies as $technology)
+        <div class="max-w-sm mb-3 bg-white border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="" src="{{asset('images/46.jpg')}}" alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$technology->title}}</h5>
+                </a>
+                <span class="bg-indigo-100  text-indigo-800 text-base p-1 font-medium mt-2 mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{$technology->category->category_name}}</span>
+            </div>
+        </div>
+        @endforeach
+    </div>
+    <button type="button" class="text-white text-base mt-2 w-full bg-gradient-to-br to-emerald-600 from-sky-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-5 py-2.5 text-center mr-2 mb-2">Все про #технологии</button>
+
+    <h4 class="mb-4 text-center font-extrabold text-gray-900 dark:text-white text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-500">#Видеоигры</span></h4>
+    <hr class="mt-2">
+    <div class="wrapper flex-wrap flex justify-around  mt-2">
+        @foreach($videogames as $videogame)
+        <div class="max-w-sm mb-3 bg-white border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="" src="{{asset('images/46.jpg')}}" alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$videogame->title}}</h5>
+                </a>
+                <span class="bg-indigo-100  text-indigo-800 text-base p-1 font-medium mt-2 mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{$videogame->category->category_name}}</span>
+            </div>
+        </div>
+        @endforeach
+    </div>
+    <button type="button" class="text-white text-base mt-2 w-full bg-gradient-to-br to-purple-600 from-indigo-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-5 py-2.5 text-center mr-2 mb-2">Все про #видеоигры</button>
+
+    <h4 class="mb-4 text-center font-extrabold text-gray-900 dark:text-white text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-yellow-400 from-orange-500">#Кинематограф</span></h4>
+    <hr class="mt-2">
+    <div class="wrapper flex-wrap flex justify-around  mt-2">
+        @foreach($cinematography as $cinema)
+        <div class="max-w-sm mb-3 bg-white border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="" src="{{asset('images/46.jpg')}}" alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$cinema->title}}</h5>
+                </a>
+                <span class="bg-indigo-100  text-indigo-800 text-base p-1 font-medium mt-2 mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{$cinema->category->category_name}}</span>
+            </div>
+        </div>
+        @endforeach
+    </div>
+    <button type="button" class="text-white text-base mt-2 w-full bg-gradient-to-br to-yellow-400 from-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-5 py-2.5 text-center mr-2 mb-2">Все про #кино</button>
+
+    <h4 class="mb-4 text-center font-extrabold text-gray-900 dark:text-white text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-red-500 from-red-700">#Музыка</span></h4>
+    <hr class="mt-2">
+    <div class="wrapper flex-wrap flex justify-around  mt-2">
+        @foreach($musics as $music)
+        <div class="max-w-sm mb-3 bg-white border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="" src="{{asset('images/46.jpg')}}" alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$music->title}}</h5>
+                </a>
+                <span class="bg-indigo-100  text-indigo-800 text-base p-1 font-medium mt-2 mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{$music->category->category_name}}</span>
+            </div>
+        </div>
+        @endforeach
+    </div>
+    <button type="button" class="text-white text-base mt-2 w-full bg-gradient-to-br to-red-500 from-red-700 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-5 py-2.5 text-center mr-2 mb-2">Все про #музыку</button>
+
+    <h4 class="mb-4 text-center font-extrabold text-gray-900 dark:text-white text-5xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-green-500 from-emerald-700">#Массовая культура</span></h4>
+    <hr class="mt-2">
+    <div class="wrapper flex-wrap flex justify-around  mt-2">
+       @foreach($mass_culture as $masscult)
+        <div class="max-w-sm bg-white border border-gray-200  shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="" src="{{asset('images/46.jpg')}}" alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$masscult->title}}</h5>
+                </a>
+                <span class="bg-indigo-100  text-indigo-800 text-base p-1 font-medium mt-2 mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{$masscult->category->category_name}}</span>
+            </div>
+        </div>
+        @endforeach
+    </div>
+    <button type="button" class="text-white text-base mt-2 w-full bg-gradient-to-br to-green-500 from-emerald-700 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  px-5 py-2.5 text-center mr-2 mb-2">Все про #массовую культуру</button>
 @endsection
