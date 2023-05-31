@@ -12,4 +12,11 @@ class Category extends Model
     {
         return $this->hasMany(Article::class);
     }
+
+    public function getCategories()
+    {
+        return Category::all();
+    }
+
+
 }

@@ -16,17 +16,17 @@ class HomeController extends Controller
 
     public function index() {
 
-        $allCategories = $this->article->getAllCategoriesArticles();
+        $allCategories = $this->article->getAllArticles(6);
 
-        $technologies = $this->article->getTechnologyCategory()->paginate(6);
+        $technologies = $this->article->getArticlesByCategory(1)->paginate(6);
 
-        $videogames = $this->article->getVideoGameCategory()->paginate(6);
+        $videogames = $this->article->getArticlesByCategory(2)->paginate(6);
 
-        $cinematography = $this->article->getCinemaCategory()->paginate(6);
+        $cinematography = $this->article->getArticlesByCategory(3)->paginate(6);
 
-        $musics = $this->article->getMusicCategory()->paginate(6);
+        $musics = $this->article->getArticlesByCategory(4)->paginate(6);
 
-        $mass_culture = $this->article->getMassCultureCategory()->paginate(6);
+        $mass_culture = $this->article->getArticlesByCategory(5)->paginate(6);
 
         return view('layouts.main', [
             'allCategories' => $allCategories,

@@ -14,34 +14,22 @@ class Article extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function getTechnologyCategory()
+    public function user()
     {
-        return Article::where('category_id', '1');;
+        return $this->belongsTo(User::class);
     }
 
-    public function getVideoGameCategory()
+
+    public function getArticlesByCategory($category_id)
     {
-        return Article::where('category_id', '2');;
+        return Article::where('category_id', $category_id);
     }
 
-    public function getCinemaCategory()
+    public function getAllArticles($quantity = null)
     {
-        return Article::where('category_id', '3');
+        return Article::latest('created_at')->paginate($quantity);
     }
 
-    public function getMusicCategory()
-    {
-        return Article::where('category_id', '4');
-    }
 
-    public function getMassCultureCategory()
-    {
-        return Article::where('category_id', '5');
-    }
-
-    public function getAllCategoriesArticles()
-    {
-        return Article::paginate(6);
-    }
 
 }
